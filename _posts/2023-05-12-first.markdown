@@ -1,0 +1,7 @@
+---
+layout: post
+title: New Post test"
+date: 2023-05-12 14:47:30 +0900
+categories: jekyll update
+---
+this is a new test post
