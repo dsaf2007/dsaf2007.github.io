@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>packet-switching - 한다면 하는 남자, 정동구의 블로그입니다</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="한다면 하는 남자, 정동구의 블로그입니다" property="og:site_name">
+  
+    <meta content="packet-switching" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+" property="og:description">
+  
+  
+    <meta content="http://localhost:4000/packet-switching/" property="og:url">
+  
+  
+    <meta content="2023-06-09T10:00:00+09:00" property="article:published_time">
+    <meta content="http://localhost:4000/about/" property="article:author">
+  
+  
+    <meta content="http://localhost:4000/flexible-jekyll/assets/img/cdg.jpg" property="og:image">
+  
+  
+    
+  
+  
+    
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
+  
+    <meta name="twitter:title" content="packet-switching">
+  
+  
+    <meta name="twitter:url" content="http://localhost:4000/packet-switching/">
+  
+  
+    <meta name="twitter:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+  
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/flexible-jekyll/assets/img/cdg.jpg">
+  
+
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/flexible-jekyll/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/flexible-jekyll/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/flexible-jekyll/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/flexible-jekyll/assets/img/favicon/apple-touch-icon-144x144.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|Lato:300,400,700&display=swap" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/flexible-jekyll/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/flexible-jekyll/assets/css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/flexible-jekyll/"><img src="/flexible-jekyll/assets/img/cdg.jpg" alt="정동구"></a>
+      </div>
+      <div class="author-name">정동구</div>
+      <p>한다면 하는남자. 세상을 바꾸는 개발자가 되고싶은 정동구입니다.</p>
+    </div>
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        
+          <li><a href="https://twitter.com/artemsheludko_" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        
+        
+          <li><a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="github"><a href="http://github.com/dsaf2007" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="linkedin"><a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:example.david@blog.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2023 &copy; 정동구</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">packet-switching</h1>
+        <div class="page-date"><span>2023, Jun 09&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <h3 id="패킷이란"><strong>패킷이란?</strong></h3>
+
+<p>네트워크 애플리케이션에서는 end system 끼리 메시지 교환이 일어나게 됩니다. 목적지 까지 메시지를 전송하기 위해서는 메시지를 작은 조각으로 쪼개게 되고, 우리는 이를 <strong>패킷</strong>이라고 부릅니다.</p>
+
+<p>패킷은 각 커뮤니케이션 링크의 최대 전송속도와 동일하게 링크를 타고 전송이 되기 때문에 패킷의 전송 시간은</p>
+
+<p>L / R ( L : 전체 패킷의 비트 수, R : 링크의 전송속도 bits/sec) 만큼 걸리게 됩니다.</p>
+
+<h3 id="store-and-forward-축적-교환">Store-and-Forward (축적 교환)</h3>
+
+<p>패킷은 어떤 방식으로 전송이 될까요? 대부분의 경우에 패킷은 <strong>store-and-forward(축적 교환)</strong> 방식을 이용합니다. store-and-forward 방식에서는 패킷 스위치가 패킷의 첫 비트를 outboud link에 전송하기 위해서는 전체 패킷을 모두 수신해야하만 합니다. 즉 일부만 먼저 받고, 먼저 보내는 행위는 불가능합니다.</p>
+
+<p><img src="/flexible-jekyll/assets/img/store-and-forward.png" alt="sotre-and-forward" /></p>
+
+<p>위 그림 1은 Store-and-Forward 방식을 나타내는 그림입니다. 첫번째 패킷이 라우터로 출발했다고 합시다. 가장 먼저 도착한 첫번째 패킷은 먼저 가고 싶겠지만 마지막 패킷이 도착하기를 기다려야 합니다. 첫 패킷이 출발하고  L / R초가 지나면 마지막 패킷까지 라우터에 도착하기 때문에 드디어 첫번째 패킷이 라우터에서 목적지로 출발 할 수 있게 됩니다. 출발지에서 라우터까지 L / R 초가 걸린것과 동일하게 라우터부터 목적지까지도 L / R초가 걸립니다. 즉 한개의 패킷이 목적지까지 도착하는데에 2L / R초가 걸리게 됩니다.</p>
+
+<p>이제 우리는 한개의 패킷이 목적지까지 도달하는데 2L / R초가 걸린다는 사실을 알았습니다. 그렇다면 그림처럼 세개의 패킷이 도착하는데에는 얼마나 걸릴까요? 세개니까 3을 곱하면 되지 않을까? 하실 수 있겠지만, <strong>그것은 틀렸습니다</strong>. 첫번째 패킷이 라우터를 거쳐 목적지까지 도착한 뒤에 두번째 패킷이 출발하는 것이 아니기 때문입니다. 첫 패킷이 목적지를 향해 출발하는 순간부터 출발지에서는 두번째 패킷의 첫 번째 비트가 출발하게 됩니다. 즉 첫번째 패킷이 온전히 목적지에 도착하는 2L / R초가 되면, 두번째 패킷의 모든 비트는 라우터에 도착하게 됩니다. 결과적으로 두개의 패킷이 목적지까지 도착하는데에 3L / R이 걸린다는 것을 알 수 있습니다. 두번째 패킷의 첫번째 비트가 목적지로 출발하면서부터 세번째 패킷의 첫 비트가 라우터를 향해 출발하기 때문에 세개의 패킷을 모두 전송하는데 걸리는 시간은 4L / R초가 됩니다.</p>
+
+<h3 id="queuing-delay와-packet-loss">Queuing Delay와 Packet Loss</h3>
+
+<p>실제 라우터는 그림 1. 처럼 한개의 input link 와 output link를 가지지 않습니다. 복수의 input과 복수의 output link에 연결이 되어있습니다. 패킷 스위치에 연결된 각각의 링크에는 <strong>Output Buffer (Output Queue)</strong>가 연결되어 있고, 여기에 패킷이 축적되고 링크로 전송됩니다. 만약 어떤 패킷A 가 B 목적지로 향하는 링크로 전송되어야 하는데, 해당 링크가 이미 다른 패킷을 전송중이라면 어떻게 될까요? 이때 패킷 A는 기존에 전송중이던 패킷이 전송 완료될 때 까지 Output Buffer에서 대기해야합니다. 패킷 A의 <strong>전송이 시작될 때 까지 Output Buffer에서 대기하는 시간을 우리는 Queuing Delay라고 합니다</strong>.</p>
+
+<p>그렇다면 Packet Loss는 언제 발생할까요? 우리는 패킷이 대기하는 Buffer가 크기가 유한하다는 사실에 주목해야합니다. 출근길 지하철을 탑승할 때 지하철이 가득 차있다면 우리는 탑승하지 못한채 버려지고, 열차는 매정하게 떠나버립니다. 패킷도 비슷한 경험을 하게 됩니다. 도착하는 Output Buffer가 가득 차 있는 상황에서 새로운 패킷이 해당 Buffer로 전송되어 도착한다면, <strong>Buffer에 들어갈 자리가 없어 도착한 패킷이 버려지거나, Buffer에 대기중이던 어떤 패킷이 버려지게 됩니다</strong>. 이러한 상황을 Packet Loss가 발생했다고 표현합니다.</p>
+
+<p>참고 : James F.Kurose, Computer Networking A Top-Down Approach, Pearson, 8th edition</p>
+
+      <div class="page-footer">
+        <div class="page-share">
+          <a href="https://twitter.com/intent/tweet?text=packet-switching&url=http://localhost:4000/packet-switching/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/packet-switching/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/packet-switching/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+        </div>
+        <div class="page-tag">
+          
+        </div>
+      </div>
+      <section class="comment-area">
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//mr-brown.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>

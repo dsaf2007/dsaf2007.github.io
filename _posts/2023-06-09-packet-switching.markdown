@@ -1,3 +1,11 @@
+---
+layout: post
+title: packet-switching
+date: 2023-06-09 10:00:00 +0900
+description:  # Add post description (optional)
+img:  # Add image post (optional)
+---
+
 ### **패킷이란?**
 
 네트워크 애플리케이션에서는 end system 끼리 메시지 교환이 일어나게 됩니다. 목적지 까지 메시지를 전송하기 위해서는 메시지를 작은 조각으로 쪼개게 되고, 우리는 이를 **패킷**이라고 부릅니다.
@@ -10,7 +18,7 @@ L / R ( L : 전체 패킷의 비트 수, R : 링크의 전송속도 bits/sec) �
 
 패킷은 어떤 방식으로 전송이 될까요? 대부분의 경우에 패킷은 **store-and-forward(축적 교환)** 방식을 이용합니다. store-and-forward 방식에서는 패킷 스위치가 패킷의 첫 비트를 outboud link에 전송하기 위해서는 전체 패킷을 모두 수신해야하만 합니다. 즉 일부만 먼저 받고, 먼저 보내는 행위는 불가능합니다.
 
-[##_Image|kage@tPJ23/btsgniw3yUB/r9kHnmrKAkA43H4efi4180/img.png|CDM|1.3|{"originWidth":525,"originHeight":217,"style":"alignCenter","caption":"그림 1. Sotre-and-Forward 패킷 스위칭"}_##]
+![sotre-and-forward]({{site.baseurl}}/assets/img/store-and-forward.png)
 
 위 그림 1은 Store-and-Forward 방식을 나타내는 그림입니다. 첫번째 패킷이 라우터로 출발했다고 합시다. 가장 먼저 도착한 첫번째 패킷은 먼저 가고 싶겠지만 마지막 패킷이 도착하기를 기다려야 합니다. 첫 패킷이 출발하고  L / R초가 지나면 마지막 패킷까지 라우터에 도착하기 때문에 드디어 첫번째 패킷이 라우터에서 목적지로 출발 할 수 있게 됩니다. 출발지에서 라우터까지 L / R 초가 걸린것과 동일하게 라우터부터 목적지까지도 L / R초가 걸립니다. 즉 한개의 패킷이 목적지까지 도착하는데에 2L / R초가 걸리게 됩니다.
 
